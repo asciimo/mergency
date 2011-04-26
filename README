@@ -1,4 +1,4 @@
-Merger is a simple little script written and tested in Python 2.6.1. Its
+Mergency is a simple little script written and tested in Python 2.6.1. Its
 simple goal is to quickly create a lot of text files from a template
 and a CSV data file. Examples of the file formats it expects can be
 found in the examples/ directory.
