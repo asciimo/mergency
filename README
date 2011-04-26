@@ -1,0 +1,28 @@
+Merger is a simple little script written and tested in Python 2.6.1. Its
+simple goal is to quickly create a lot of text files from a template
+and a CSV data file. Examples of the file formats it expects can be
+found in the examples/ directory.
+
+The first line of the CSV must contain field names which 
+correspond to the template variable fields. Variable fields in 
+the text file must be flanked by percent signs (%). The first
+value of each CSV record must contain the output filename for
+that record.
+
+For example, here are the first 2 lines of a CSV data file, data.csv:
+
+NAME,NOUN_1,VERB_1,NOUN_2
+"file_one","fox","lept","emu"
+
+Here is an example template file, template.txt:
+
+The quick, red %NOUN_1% %VERB_1% over the lazy brown %NOUN_2%
+
+Here's the command to run:
+
+$ mergency.py data.csv template.tpl
+
+The output is a file named file_one.txt, and its contents are:
+
+The quick, red fox lept over the lazy brown emu.
+
